@@ -36,26 +36,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-Jz-s1D">
-                                <rect key="frame" x="0.0" y="9" width="320" height="543"/>
+                                <rect key="frame" x="0.0" y="9" width="320" height="559"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jhm-aX-a0l">
-                                    <size key="itemSize" width="298" height="182"/>
+                                    <size key="itemSize" width="298" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="HaM-zl-X4G" customClass="CollectionViewCell">
-                                        <rect key="frame" x="11" y="64" width="298" height="182"/>
+                                        <rect key="frame" x="11" y="64" width="298" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="298" height="182"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="298" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ap-eT-gxj">
-                                                    <rect key="frame" x="-1.5" y="0.0" width="299.5" height="150"/>
+                                                    <rect key="frame" x="-1.5" y="0.0" width="299.5" height="142"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAn-AK-jPD">
-                                                    <rect key="frame" x="216" y="152" width="82" height="30"/>
+                                                    <rect key="frame" x="216" y="142" width="82" height="28"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                             </subviews>
@@ -69,7 +69,7 @@
                                 </cells>
                             </collectionView>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8S-1e-pjs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="560"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLa-IF-05t" userLabel="remove WebView Button">
