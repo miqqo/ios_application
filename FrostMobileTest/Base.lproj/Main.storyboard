@@ -16,7 +16,7 @@
                         <color key="tintColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fEU-Tt-tiZ" kind="relationship" relationship="rootViewController" id="1sw-Qh-SfI"/>
+                        <segue destination="Idc-aR-8wZ" kind="relationship" relationship="rootViewController" id="t5s-oy-HIQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyM-9Q-nDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,58 +24,9 @@
             <point key="canvasLocation" x="-316" y="291"/>
         </scene>
         <!--Frost Mobile Test-->
-        <scene sceneID="WTe-Pf-geO">
-            <objects>
-                <collectionViewController id="fEU-Tt-tiZ" customClass="CollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="E0e-JV-J3J">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="utC-Vb-U6C">
-                            <size key="itemSize" width="292.5" height="149"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="c2G-xL-QST" customClass="CollectionViewCell">
-                                <rect key="frame" x="14" y="64" width="292.5" height="149"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="292.5" height="149"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Dk-6k-yi7">
-                                            <rect key="frame" x="0.0" y="0.0" width="292.5" height="118"/>
-                                        </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4D-ac-zfr">
-                                            <rect key="frame" x="210" y="119" width="82" height="30"/>
-                                            <state key="normal" title="Button"/>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <color key="backgroundColor" red="0.31159199313337138" green="0.68882211538461546" blue="0.14333075890588981" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="button" destination="a4D-ac-zfr" id="Apb-Zr-0os"/>
-                                    <outlet property="image" destination="6Dk-6k-yi7" id="m2c-4g-yt2"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="fEU-Tt-tiZ" id="a79-L3-bxI"/>
-                            <outlet property="delegate" destination="fEU-Tt-tiZ" id="QeY-PR-SwK"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Frost Mobile Test" id="znc-5Q-LEr"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSb-RY-P9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="112" y="303"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="qMT-wk-Yel">
             <objects>
-                <viewController id="Idc-aR-8wZ" sceneMemberID="viewController">
+                <viewController id="Idc-aR-8wZ" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eGw-Jb-3T0"/>
                         <viewControllerLayoutGuide type="bottom" id="5TJ-ID-e4Z"/>
@@ -85,41 +36,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x7N-Jz-s1D">
-                                <rect key="frame" x="20" y="38" width="280" height="522"/>
+                                <rect key="frame" x="0.0" y="9" width="320" height="543"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jhm-aX-a0l">
-                                    <size key="itemSize" width="277" height="162"/>
+                                    <size key="itemSize" width="298" height="182"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HaM-zl-X4G">
-                                        <rect key="frame" x="1.5" y="0.0" width="277" height="162"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="HaM-zl-X4G" customClass="CollectionViewCell">
+                                        <rect key="frame" x="11" y="64" width="298" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="277" height="162"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="298" height="182"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ap-eT-gxj">
-                                                    <rect key="frame" x="-1.5" y="0.0" width="280" height="134"/>
+                                                    <rect key="frame" x="-1.5" y="0.0" width="299.5" height="150"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAn-AK-jPD">
-                                                    <rect key="frame" x="195" y="132" width="82" height="30"/>
+                                                    <rect key="frame" x="216" y="152" width="82" height="30"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="button" destination="mAn-AK-jPD" id="L8m-4V-aeD"/>
+                                            <outlet property="image" destination="3ap-eT-gxj" id="R9G-CF-ryK"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8S-1e-pjs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="560"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLa-IF-05t" userLabel="remove WebView Button">
+                                <rect key="frame" x="253" y="72" width="47" height="47"/>
+                                <state key="normal" title="Button" image="cancel_filled-512"/>
+                                <connections>
+                                    <action selector="removeWebview:" destination="Idc-aR-8wZ" eventType="touchUpInside" id="TJY-eV-TVg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Frost Mobile Test" id="zVQ-C4-l4R"/>
+                    <connections>
+                        <outlet property="collectionView" destination="x7N-Jz-s1D" id="YE2-X3-LRB"/>
+                        <outlet property="removeWebview" destination="fLa-IF-05t" id="acp-3v-Ctm"/>
+                        <outlet property="webView" destination="Y8S-1e-pjs" id="QnK-GK-ecJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sW1-en-pyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489" y="304"/>
+            <point key="canvasLocation" x="90" y="291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cancel_filled-512" width="512" height="512"/>
+    </resources>
 </document>

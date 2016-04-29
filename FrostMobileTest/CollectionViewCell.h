@@ -12,4 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UIButton *button;
 
+
 @end
