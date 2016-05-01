@@ -35,6 +35,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+    self.
     
     self.webView.hidden = YES;
     self.removeWebview.hidden = YES;
@@ -79,8 +80,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    
-    return (unsigned long)self.puffs.count;
+    return 4;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
