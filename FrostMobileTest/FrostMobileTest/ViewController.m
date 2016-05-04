@@ -20,12 +20,15 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
     
     [self readFromJson];
     
@@ -33,11 +36,10 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:CREAMWHITE}];
     
-    self.collectionView.dataSource = self;
-    self.collectionView.delegate = self;
-    
     self.webView.hidden = YES;
     self.removeWebview.hidden = YES;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCollectionView:) name:@"jsonDone" object:nil];
 }
 
 
@@ -52,6 +54,10 @@ static NSString * const reuseIdentifier = @"Cell";
     [super didReceiveMemoryWarning];
 }
 
+-(void)updateCollectionView:(NSNotification*)note{
+    [self.collectionView reloadData];
+}
+
 
 - (void) readFromJson{
     NSURL *URL = [NSURL URLWithString:@"http://fake-api.frostcloud.se/api"];
@@ -62,11 +68,15 @@ static NSString * const reuseIdentifier = @"Cell";
                                             completionHandler:
                                   ^(NSData *data, NSURLResponse *response, NSError *error) {
                                       
-                                      if(error == nil){
-                                          self.jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                                          self.puffs = [self.jsonDictionary objectForKey:@"puffs"];
-                                         // NSLog(@"puffs = %@",self.jsonDictionary[@"puffs"]);
-                                      }
+                                      dispatch_async(dispatch_get_main_queue(), ^{
+                                          
+                                          if(error == nil){
+                                              self.jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                              self.puffs = [self.jsonDictionary objectForKey:@"puffs"];
+                                              // NSLog(@"puffs = %@",self.jsonDictionary[@"puffs"]);
+                                              [[NSNotificationCenter defaultCenter] postNotificationName:@"jsonDone" object:nil];
+                                          }
+                                    });
                                   }];
     [task resume];
 }
@@ -116,13 +126,34 @@ static NSString * const reuseIdentifier = @"Cell";
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
     
-    self.webView.hidden = NO;
-    self.removeWebview.hidden = NO;
+    [UIView animateWithDuration:0.7f animations:^{
+        [self.webView setAlpha:0.0f];
+        
+    }completion:^(BOOL finished) {
+        self.webView.hidden = NO;
+        self.removeWebview.hidden = NO;
+        [UIView animateWithDuration:0.7f animations:^{
+            [self.webView setAlpha:1.0f];
+        } completion:nil];
+        
+    }];
+    
 }
 
 - (IBAction)removeWebview:(id)sender {
-    self.webView.hidden = YES;
-    self.removeWebview.hidden = YES;
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"about:blank"]]];
+
+    [UIView animateWithDuration:0.4f animations:^{
+        [self.webView setAlpha:1.0f];
+        
+    }completion:^(BOOL finished) {
+        self.webView.hidden = NO;
+        self.removeWebview.hidden = NO;
+        [UIView animateWithDuration:0.4f animations:^{
+            [self.webView setAlpha:0.0f];
+        } completion:nil];
+        
+    }];
 }
 @end
 
